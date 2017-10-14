@@ -1,6 +1,8 @@
 const express = require('express');
 const app    = express();
 const bodyParser = require('body-Parser')
+const methodOverride = require('method-override')
+require('./db/db')
 
 const petController = require('./controllers/pets')
 

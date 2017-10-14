@@ -4,12 +4,33 @@ const pet    = require('../models/pets')
 
 
 router.get('/', (req, res)=>{
-		if(res)
-			
-		res.render('index', {pet: pet})
+		
+		pet.find((err,pets)=>{
+			if(err)
+				res.send('error')
+			res.render('index', {pet: pets})
+		})
 	
 })
 
+
+router.get('/new', (req, res)=>{
+		
+			
+		res.render('new', {})
+
+		console.log( 'this is the new page')
+	
+})
+
+router.get('/edit', (req, res)=>{
+		
+			
+		res.render('new', {})
+
+		console.log( 'this is the edit page')
+	
+})
 
 
 

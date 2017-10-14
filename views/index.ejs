@@ -7,13 +7,28 @@
 
 
 		
+<ul>
 
-		<%= pet.name %>
+	<h2>PETS<h2>
+		<% pets.forEach((item) => {%>
+		<li><%= pets.name %></li>
+		<li><%= pets.breed%></li>
+		<li><%= petss.age %></li>
+		<li><%= pets.longhair%></li>
+
+	<form action="/pets/<%= item._id%>?_method=DELETE"
+		method="POST">
+			<button type="submit">delete</button>
+		</form>
+
+
+
+	<% })%>
 
 
 
 
-
+</ul>
 	
 
 
