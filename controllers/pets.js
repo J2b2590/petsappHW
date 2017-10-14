@@ -4,15 +4,11 @@ const pet    = require('../models/pets')
 
 
 router.get('/', (req, res)=>{
-
-
-	res.render('index',{
-
-				pet: pet
-
-	})
+		if(res)
+			
+		res.render('index', {pet: pet})
+	
 })
-
 
 
 
