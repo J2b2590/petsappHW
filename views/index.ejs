@@ -10,21 +10,23 @@
 <ul>
 
 	<h2>PETS<h2>
-		<% pets.forEach((item) => {%>
-		<li><%= pets.name %></li>
-		<li><%= pets.breed%></li>
-		<li><%= petss.age %></li>
-		<li><%= pets.longhair%></li>
+		
+		
 
-	<form action="/pets/<%= item._id%>?_method=DELETE"
-		method="POST">
+	<% pet.forEach((item)=>{%>
+		<li> <%= item.name %><li>
+		<li> <%= item.breed %> </li>
+		<li> <%= item.age %> </li>
+		<li> <%= item.hairtype %> </li>
+		<form action="/pets/<%=item._id%>?_method=DELETE" method="POST">
 			<button type="submit">delete</button>
 		</form>
+		<a href="/pets/<%= item._id %>/edit" index="petEdit">Edit</a>
 
 
 
 	<% })%>
-
+ 
 
 
 

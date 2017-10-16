@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<h1>PETS SHOW PAGE</h1>
+
+	<form action="/pets/<%=pet._id%>?_method=DELETE" method="POST">
+
+
+		<li> <%= pet.name %> </li>
+		<li> <%= pet.breed %> </li>
+		<li> <%= pet.age %> </li>
+		<li> <%= pet.hairtype %> </li>
+
+	<a href="/pets/<%= item._id %>/edit" index="petEdit">Edit</a>
+		<button type="submit">delete</button>
+		
+
+
+
+	</form>
+
+
+
+	<script src="/javascripts/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Edit Pet Page</h1>
+	
+
+	<form action="/pets/<%=pet._id%>/edit?_method=PUT" method="POST">
+			
+			Name: <input type="text" name="name" value="<%=pet.name%>">
+			Breed: <input type="text" name="breed" value="<%=pet.breed%>">
+			Age: <input type="text" name="age" value="<%=pet.age%>">
+			Hairtype: <input type="text" name="hairtype" value="<%=pet.hairtype%>">
+			
+	
+
+
+
+			  <button type="submit">Update</button>
+
+
+
+		</form>
+
+
+		<script src="/javascripts/app"></script>
+
+</body>
+</html>

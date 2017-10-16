@@ -5,10 +5,10 @@ const PetSchema = new mongoose.Schema({
 	name: String,
 	breed: String,
 	age: Number,
-	longHair: Boolean
+	hairtype: String
 
 })
 
-module.exports = mongoose.model('Pets', PetSchema)
+module.exports = mongoose.model('Pet', PetSchema)
 
 
